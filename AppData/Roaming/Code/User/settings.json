@@ -1,0 +1,59 @@
+{
+	"macros.list": {
+		"custom1": [
+			"vscode-neovim.compositeEscape1",
+			// Add here more command
+		]
+	},
+	"vscode-neovim.textDecorationsAtTop":true,
+	"[dart]": {
+	  "editor.formatOnSave": true,
+	  "editor.formatOnType": true,
+	  "editor.rulers": [
+		80
+	  ],
+	  "editor.selectionHighlight": false,
+	  "editor.suggest.snippetsPreventQuickSuggestions": false,
+	  "editor.suggestSelection": "first",
+	  "editor.tabCompletion": "onlySnippets",
+	  "editor.wordBasedSuggestions": false
+	},
+	"[json]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode",
+	  "editor.formatOnSave": false,
+	  "editor.tabSize": 2
+	},
+	"[yaml]": {
+	  "editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[jsonc]": {
+	  "editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"editor.suggestSelection": "first",
+	"editor.lineNumbers": "relative",
+	"editor.cursorBlinking": "solid",
+	"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorStyle": "underline",
+	"editor.fontFamily": "Operator Mono Lig",
+	"editor.fontLigatures": true,
+	"editor.tabCompletion": "on",
+	"editor.scrollBeyondLastLine": false,
+	"editor.minimap.enabled": false,
+	"editor.codeActionsOnSave": {
+	  "source.fixAll": true,
+	  "source.fixAll.eslint": true
+	},
+	"files.autoSave": "off",
+	"files.eol": "\n",
+	"terminal.integrated.cursorWidth": 2,
+	"terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+	"terminal.integrated.fontFamily": "Hack NF",
+	"workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
+	"workbench.editor.enablePreview": false,
+	"editor.renderWhitespace": "trailing",
+	"files.trimTrailingWhitespace": true,
+	"editor.inlineSuggest.enabled": true,
+	"editor.accessibilitySupport": "off",
+	"vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\uriah\\scoop\\shims\\nvim.exe",
+	"vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\uriah\\AppData\\Local\\nvim\\init.vim",
+  }

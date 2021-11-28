@@ -11,6 +11,34 @@
             "keys": "alt+plus"
         },
         {
+            "command": "scrollDown",
+            "keys": "ctrl+shift+j"
+
+        },
+        {
+            "command": "scrollUp",
+            "keys": "ctrl+shift+k"
+
+        },
+        {
+            "command": "scrollToBottom",
+            "keys": "ctrl+shift+l"
+
+        },
+        {
+            "command": "scrollToTop",
+            "keys": "ctrl+shift+h"
+
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "vertical"
+            },
+            "keys": "alt+plus"
+        },
+        {
             "command": "togglePaneZoom",
             "keys": "alt+f"
         },

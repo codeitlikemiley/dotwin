@@ -96,6 +96,10 @@ function New-Link($target, $link) {
 	New-Item -ItemType SymbolicLink -Path $link -Value $target
 }
 
+function New-HardLink($target, $link) {
+	New-Item -ItemType HardLink -Path $link -Value $target
+}
+
 # http://stackoverflow.com/questions/39148304/fuser-equivalent-in-powershell/39148540#39148540
 function fuser($relativeFile) {
 	$file = Resolve-Path $relativeFile

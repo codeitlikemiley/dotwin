@@ -1,0 +1,174 @@
+env:
+  TERM: alacritty
+  LANG: "en_US.UTF-8"
+  LC_CTYPE: en_US.UTF-8
+
+draw_bold_text_with_bright_colors: true
+live_config_reload: true
+
+
+background_opacity: 0.9
+vi_mode_style: Beam
+shell:
+  program: bash
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
+
+working_directory: C:\Users\uriah
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+  - { mouse: Right, action: Copy }
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: "Hack NF"
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: "Hack NF"
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: "Hack NF"
+
+    # The `style` can be specified to pick a specific face.
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: "Hack NF"
+    # The `style` can be specified to pick a specific face.
+    #style: Bold Italic
+
+  # Point size
+  size: 10.0
+
+# Colors (Tomorrow Night Bright)
+colors:
+  name: TokyoNight Storm
+  author: Folke
+  # Default colors
+  primary:
+    background: '0x24283b'
+    foreground: '0xc0caf5'
+
+  # Normal colors
+  normal:
+    black: '0x1D202F'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xa9b1d6'
+
+  # Bright colors
+  bright:
+    black: '0x414868'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+theme: Tokyonight_Storm
+
+key_bindings:
+  - { key: E,     mods: Alt,       chars: "\x01\x45" } # View Window Tree
+  - { key: V,     mods: Alt|Shift,       chars: "\x01\x5f" } # Layout Even Horizontal
+  - { key: H,     mods: Alt,       chars: "\x01\x68" } # Move Pane Left
+  - { key: J,     mods: Alt,       chars: "\x01\x6a" } # Move Pane Down
+  - { key: K,     mods: Alt,       chars: "\x01\x6b" } # Move Pane Up
+  - { key: L,     mods: Alt,       chars: "\x01\x6c" } # Move Pane Right
+  - { key: N,     mods: Alt,       chars: "\x01\x63" } # Create New Window
+  - { key: Q,     mods: Alt,       chars: "\x01\x51" } # Kill Workspace | Same as Close Tab
+  - { key: R,     mods: Alt,       chars: "\x01\x72" } # Rename Pane
+  - { key: T,     mods: Alt,       chars: "\x01\x63" } # Create New Window
+  - { key: W,     mods: Alt,       chars: "\x01\x78" } # Kill Window
+  - { key: Z,     mods: Alt,       chars: "\x01\x7a" } # Zoom Pane
+  - { key: F,       mods: Alt,       action: ToggleFullscreen }
+
+    # Manage Tabbing
+  - { key: Key1,  mods: Alt,       chars: "\x01\x31" }
+  - { key: Key2,  mods: Alt,       chars: "\x01\x32" }
+  - { key: Key3,  mods: Alt,       chars: "\x01\x33" }
+  - { key: Key4,  mods: Alt,       chars: "\x01\x34" }
+  - { key: Key5,  mods: Alt,       chars: "\x01\x35" }
+  - { key: Key6,  mods: Alt,       chars: "\x01\x36" }
+  - { key: Key7,  mods: Alt,       chars: "\x01\x37" }
+  - { key: Key8,  mods: Alt,       chars: "\x01\x38" }
+  - { key: Key9,  mods: Alt,       chars: "\x01\x39" }
+
+  - { key: F4,     mods: Alt, action:  Quit     }
+
+  - { key: Return,  mods: Alt, mode: ~Search,  chars: "\x01\x5b" } # Tmux Vi Mode
+  - { key: Return,  mods: Alt|Shift, mode: ~Search,    action: ToggleViMode } # Alacritty Vi Mode
+
+  - { key: S,     mods: Alt,  chars: "\x01\x73" } # Split Horizontal Pane
+  - { key: V,      mods: Alt,  chars: "\x01\x61" } # Split Vertical Pane
+  - { key: X,      mods: Alt|Shift,  chars: "\x01\x7b" } # Move Current Pane Left
+  - { key: X,     mods: Alt,  chars: "\x01\x7d" } # Move Current Pane Right
+  - { key: S,     mods: Alt|Shift, chars: "\x01\x2b" } # Even Layout Horizontal
+  - { key: H,     mods: Alt|Shift, chars: "\x01\x48" } # Decrease Pane Horizontal
+  - { key: J,     mods: Alt|Shift, chars: "\x01\x4a" } # Decrease Pane Vertical
+  - { key: K,     mods: Alt|Shift, chars: "\x01\x4b" } # Increase Pane Vertical
+  - { key: L,     mods: Alt|Shift, chars: "\x01\x4c" } # Increase Pane Horizontal
+  - { key: R,     mods: Alt|Shift, chars: "\x01\x74" } # Reload Tmux Config
+  - { key: W,     mods: Alt|Shift, chars: "\x01\x5a" } # Tmux Kill Server
+
+debug:
+  # Display the time it takes to redraw each frame.
+  render_timer: false
+
+  # Keep the log file after quitting Alacritty.
+  persistent_logging: false
+
+  # Log level
+  #
+  # Values for `log_level`:
+  #   - Off
+  #   - Error
+  #   - Warn
+  #   - Info
+  #   - Debug
+  #   - Trace
+  log_level: Warn
+
+  # Print all received window events.
+  print_events: false
+

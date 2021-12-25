@@ -61,9 +61,6 @@ function rf($filepath) { Remove-Item -Path $filepath -Recurse -Force -ErrorActio
 function l { Get-ChildItem -Path (Get-Location) }
 function c {Clear-Host}
 
-function v {nvim $args}
-
-function vim{nvim}
 function ls { Get-ChildItem -Path (Get-Location) -ReadOnly}
 ## define all functions less than 6
 
@@ -186,6 +183,8 @@ function Remove-Tag-Remote { git push --delete origin $args }
 function Remove-Tag-Local { git tag -d $args }
 function Push-Tag { git push origin --tags --force }
 function Add-Wip { "git add . && git commit -m 'wip'" }
+function mp4{youtube-dl.exe -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args}
+function mp3{youtube-dl.exe -x -f 'bestaudio/best --audio-format mp3' $args}
 # -------------------------------------------------------------------------------------------------
 # Laravel Commands
 #function Invoke-Tinker-Command { php artisan tinker }
@@ -213,7 +212,7 @@ Set-Alias -Name wip -Value Add-Wip -Option AllScope
 #Set-Alias -Name t -Value Invoke-Phpunit -Option AllScope
 #Set-Alias -Name f -Value flutter.exe -Option AllScope
 #Set-Alias -Name d -Value dart.exe -Option AllScope
-# set-alias -Name vim -Value nvim -Option AllScope
+set-alias -Name vim -Value nvim -Option AllScope
 # -------------------------------------------------------------------------------------------------
 # Directories Functions that will be Alias
 #function Set-Path-www { Set-Location -Path $env:USERPROFILE\www }
@@ -245,7 +244,7 @@ function Open-VSCode-Keys { code $env:appdata\Code\User\keybindings.json }
 function Open-VSCode-Settings { code $env:appdata\Code\User\settings.json }
 # Other Config
 function Open-Vim-Config { code $env:LOCALAPPDATA\nvim\init.vim }
-#function Open-Alacritty-Config { code $env:appdata\alacritty\alacritty.yml }
+function Open-Alacritty-Config { code $env:appdata\alacritty\alacritty.yml }
 function Open-Etc-Host { code $env:windir\System32\Drivers\etc\hosts }
 function Open-Profile { code $profile}
 #function Export-Firestore { gcloud beta firestore export --collection-ids=$args}
@@ -253,7 +252,7 @@ function Open-Profile { code $profile}
 
 # Config Aliases
 Set-Alias -Name cfv -Value Open-Vim-Config -Option AllScope
-Set-Alias -Name cfV -Value Open-VSCode-Settings -Option AllScope
+Set-Alias -Name cfvs -Value Open-VSCode-Settings -Option AllScope
 Set-Alias -Name cfk -Value Open-VSCode-Keys -Option AllScope
 Set-Alias -Name etc -Value Open-Etc-Hosts -Option AllScope
 Set-Alias -Name pro -Value Open-Profile -Option AllScope

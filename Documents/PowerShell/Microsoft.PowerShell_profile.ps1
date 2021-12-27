@@ -183,8 +183,8 @@ function Remove-Tag-Remote { git push --delete origin $args }
 function Remove-Tag-Local { git tag -d $args }
 function Push-Tag { git push origin --tags --force }
 function Add-Wip { "git add . && git commit -m 'wip'" }
-function mp4{youtube-dl.exe -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args}
-function mp3{youtube-dl.exe -x -f 'bestaudio/best --audio-format mp3' $args}
+function mp4{yt-dlp.exe -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args}
+function mp3{yt-dlp.exe -x --audio-format mp3 --audio-quality 0 $args}
 # -------------------------------------------------------------------------------------------------
 # Laravel Commands
 #function Invoke-Tinker-Command { php artisan tinker }

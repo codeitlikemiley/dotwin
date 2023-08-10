@@ -44,7 +44,14 @@ Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 " use vscode easymotion when in vscode mode
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+
+" Themes
+Plug 'arcticicestudio/nord-vim'
+"Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+
 call plug#end()
+"colorscheme gruvbox-baby
+colorscheme nord
 
 " All NEOVIM And VSCODE Settings Shared
 
@@ -203,3 +210,21 @@ set updatetime=300
 
 
 endif
+
+
+" All of neovide config
+if exists('g:neovide')
+
+let g:neovide_transparency=0.99
+let g:neovide_refresh_Rate=120
+let g:neovide_floating_blur_amount_x = 2.0
+let g:neovide_floating_blur_amount_y = 2.0
+let g:neovide_scroll_animation_length = 0.3
+let g:neovide_fullscreen=v:true
+let g:neovide_input_use_logo=v:true
+let g:neovide_cursor_antialiasing=v:true
+let g:neovide_cursor_vfx_mode = "railgun"
+let g:neovide_cursor_vfx_opacity=200.0
+
+endif
+" End of Neovide config

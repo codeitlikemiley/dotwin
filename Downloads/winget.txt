@@ -1,0 +1,220 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2023-08-11T00:09:04.197-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Canva.Canva",
+					"Version" : "1.38.0"
+				},
+				{
+					"PackageIdentifier" : "7zip.7zip",
+					"Version" : "23.01"
+				},
+				{
+					"PackageIdentifier" : "Google.AndroidStudio",
+					"Version" : "2020.3.1.22"
+				},
+				{
+					"PackageIdentifier" : "AutoHotkey.AutoHotkey",
+					"Version" : "1.1.33.10"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop",
+					"Version" : "4.10.0"
+				},
+				{
+					"PackageIdentifier" : "Figma.Figma",
+					"Version" : "116.11.1"
+				},
+				{
+					"PackageIdentifier" : "Figma.FigmaAgent",
+					"Version" : "116.10.8"
+				},
+				{
+					"PackageIdentifier" : "Git.Git",
+					"Version" : "2.41.0.3"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.GnuPG",
+					"Version" : "2.3.4"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.Gpg4win",
+					"Version" : "4.0.0"
+				},
+				{
+					"PackageIdentifier" : "Gyan.FFmpeg",
+					"Version" : "6.0"
+				},
+				{
+					"PackageIdentifier" : "IObit.IObitUnlocker",
+					"Version" : "1.2.0.1"
+				},
+				{
+					"PackageIdentifier" : "JRSoftware.InnoSetup",
+					"Version" : "6.2.0"
+				},
+				{
+					"PackageIdentifier" : "Logitech.LogiBolt",
+					"Version" : "1.2.6024.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge",
+					"Version" : "115.0.1901.200"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
+					"Version" : "115.0.1901.200"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal",
+					"Version" : "1.17.11461.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive",
+					"Version" : "23.160.0801.0002"
+				},
+				{
+					"PackageIdentifier" : "Postman.Postman",
+					"Version" : "10.0.1"
+				},
+				{
+					"PackageIdentifier" : "Rustlang.Rustup",
+					"Version" : "Unknown"
+				},
+				{
+					"PackageIdentifier" : "Schniz.fnm",
+					"Version" : "1.33.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams",
+					"Version" : "1.6.00.20074"
+				},
+				{
+					"PackageIdentifier" : "ajeetdsouza.zoxide",
+					"Version" : "0.9.2"
+				},
+				{
+					"PackageIdentifier" : "junegunn.fzf",
+					"Version" : "0.42.0"
+				},
+				{
+					"PackageIdentifier" : "nektos.act",
+					"Version" : "0.2.49"
+				},
+				{
+					"PackageIdentifier" : "c0re100.qBittorrent-Enhanced-Edition",
+					"Version" : "4.5.4.10"
+				},
+				{
+					"PackageIdentifier" : "SlackTechnologies.Slack",
+					"Version" : "4.33.84"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.3_1",
+					"Version" : "3.1.32"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
+					"Version" : "6.0.21"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64",
+					"Version" : "10.0.40219"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.BingWallpaper",
+					"Version" : "2.0.0.3"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome",
+					"Version" : "115.0.5790.171"
+				},
+				{
+					"PackageIdentifier" : "GitHub.cli",
+					"Version" : "2.32.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerAutomateDesktop",
+					"Version" : "2.14.217.21314"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
+					"Version" : "14.32.31326.0"
+				},
+				{
+					"PackageIdentifier" : "MSYS2.MSYS2",
+					"Version" : "20211130"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.3.6.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
+					"Version" : "14.31.31103.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsSDK.10.0.19041",
+					"Version" : "10.1.19041.685"
+				},
+				{
+					"PackageIdentifier" : "Alacritty.Alacritty",
+					"Version" : "0.12.2"
+				},
+				{
+					"PackageIdentifier" : "Starship.Starship",
+					"Version" : "1.16.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode",
+					"Version" : "1.81.0"
+				},
+				{
+					"PackageIdentifier" : "Logitech.OptionsPlus",
+					"Version" : "1.48.437015"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.GeForceExperience",
+					"Version" : "3.16.0.122"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.PhysX",
+					"Version" : "9.19.0218"
+				},
+				{
+					"PackageIdentifier" : "DucFabulous.UltraViewer",
+					"Version" : "6.5.27"
+				},
+				{
+					"PackageIdentifier" : "dorssel.usbipd-win",
+					"Version" : "1.3.0"
+				},
+				{
+					"PackageIdentifier" : "Neovim.Neovim",
+					"Version" : "0.9.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86",
+					"Version" : "10.0.40219"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys",
+					"Version" : "0.72.0"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.5.2201"
+}

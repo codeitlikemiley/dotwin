@@ -1,195 +1,84 @@
 {
-	"macros.list": {
-		"custom1": [
-			"vscode-neovim.compositeEscape1",
-			// Add here more command
-		]
-	},
-	"vscode-neovim.textDecorationsAtTop": true,
-	"[blade]": {
-		"editor.formatOnSave": false,
-		"editor.tabSize": 4,
-	},
 	"better-comments.highlightPlainText": true,
-	// "better-phpunit.phpunitBinary": null, // to be added
-	"css.validate": false,
-	"[css]": {
-		"editor.formatOnSave": false,
-		"editor.tabSize": 2,
-	},
 	"debug.openDebug": "openOnDebugBreak",
-	"[dart]": {
-		"editor.formatOnSave": true,
-		"editor.formatOnType": true,
-		"editor.rulers": [
-			80
-		],
-		"editor.selectionHighlight": false,
-		"editor.suggest.snippetsPreventQuickSuggestions": false,
-		"editor.suggestSelection": "first",
-		"editor.tabCompletion": "onlySnippets",
-		"editor.wordBasedSuggestions": false
-	},
+	"dart.debugExternalPackageLibraries": true,
 	"dart.debugSdkLibraries": false,
-	"dart.normalizeFileCasing": true,
-	"dart.renameFilesWithClasses": "always",
-	"dart.showSkippedTests": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+	},
+	"editor.cursorBlinking": "solid",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorStyle": "block",
+	"editor.fontFamily": "Operator Mono Lig",
+	"editor.fontLigatures": true,
+	"editor.formatOnSave": false,
+	"editor.inlineSuggest.enabled": true,
+	"editor.lineNumbers": "relative",
+	"editor.minimap.enabled": false,
+	"editor.quickSuggestions": {
+		"comments": "on",
+		"strings": "on",
+		"other": "on"
+	},
+	"editor.scrollBeyondLastLine": true,
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "on",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
 	"emmet.includeLanguages": {
 		"blade": "html",
 		"vue-html": "html",
 		"javascript": "javascriptreact"
 	},
-	"emmet.triggerExpansionOnTab": true,
-	"eslint.run": "onSave",
-	// this will change if we use different version of node in fnm
-	"eslint.options": {
-		"extensions": [
-			".html",
-			".js",
-			".vue",
-			".jsx"
-		]
-	},
-	"eslint.validate": [
-		"html",
-		"vue",
-		"javascript",
-		"javascriptreact"
+	"errorLens.enabledDiagnosticLevels": [
+		"error",
+		"info"
 	],
-	"javascript.validate.enable": true,
-	"files.exclude": {
-		"**.dart_tool": true,
-		"**.idea": true,
-		"**/*.g.dart": true,
-		"**/*.inject.dart": true,
-		"**/*.inject.summary": true
-	},
-	"files.defaultLanguage": "markdown",
+	"emmet.triggerExpansionOnTab": true,
+	"files.autoSave": "off",
+	"files.eol": "\n",
+	"files.defaultLanguage": "plaintext",
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": true,
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": false,
 		"editor.tabSize": 2,
 	},
 	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.defaultFormatter": "ZainChen.json",
 		"editor.formatOnSave": false,
 		"editor.tabSize": 2
 	},
-	// "phpcs.ignorePatterns": [
-	// 	"phpcs.executablePath": "/Users/uriah/.composer/vendor/bin/phpcs",
-	// 	"*/storage/",
-	// 	"*/vendor/*",
-	// 	"*/node_modules/*",
-	// 	"*/database/*",
-	// 	"*/resources/*"
-	// ],
-	// "phpcs.standard": "./phpcs.xml",
-	"phpfmt.passes": [
-        "PSR2KeywordsLowerCase",
-        "PSR2LnAfterNamespace",
-        "PSR2CurlyOpenNextLine",
-        "PSR2ModifierVisibilityStaticOrder",
-        "PSR2SingleEmptyLineAndStripClosingTag",
-        "ReindentSwitchBlocks",
-        "AlignConstVisibilityEquals",
-        "AlignDoubleArrow",
-        "AlignEquals",
-        "AlignGroupDoubleArrow",
-        "AutoSemicolon",
-        "ClassToStatic",
-        "DoubleToSingleQuote",
-        "SortUseNameSpace",
-        "SpaceBetweenMethods",
-        "ShortArray",
-        "RestoreComments",
-        "OrderMethodAndVisibility",
-        "ReindentAndAlignObjOps",
-        "ReindentSwitchBlocks",
-    ],
-    "phpfmt.psr2": false,
-    "phpfmt.exclude": [
-        "ReindentComments",
-        "StripNewlineWithinClassBody"
-    ],
-    "phpfmt.smart_linebreak_after_curly": true,
-    "phpfmt.indent_with_space": 4,
-    "phpfmt.detect_indent": false,
-    "phpfmt.yoda": true,
-    "[markdown]": {
-        "editor.defaultFormatter": "mervin.markdown-formatter",
-        "editor.formatOnSave": false,
-        "editor.quickSuggestions": true,
-        "editor.tabSize": 2
-    },
-	"phpfmt.php_bin": "/opt/homebrew/bin/php",
-	"[yaml]": {
-		"editor.defaultFormatter": "redhat.vscode-yaml"
-	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"editor.formatOnSave": false,
+		"editor.tabSize": 2
 	},
-	"editor.lineNumbers": "relative",
-	"editor.cursorBlinking": "solid",
-	"editor.cursorSmoothCaretAnimation": true,
-	"editor.cursorStyle": "underline",
-	"editor.fontFamily": "Hack NF",
-	"editor.fontLigatures": true,
-	"editor.tabCompletion": "on",
-	"editor.scrollBeyondLastLine": false,
-	"editor.minimap.enabled": false,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.fixAll.eslint": true
-	},
-	"files.autoSave": "off",
-	"files.eol": "\n",
-	"search.exclude": {
-        ".flutter-plugins": true,
-        ".flutter-plugins-dependencies": true,
-        ".gitignore": true,
-        ".metadata": true,
-        "**/.fvm": true,
-        "**/.vscode": true,
-        "**/*.iml": true,
-        "**/build": true,
-        "**/test": true,
-        "debug.log": true,
-        "pubspec.lock": true
-    },
-    "search.mode": "newEditor",
-	"terminal.integrated.cursorWidth": 2,
-    "terminal.integrated.fontFamily": "Hack NF",
-    "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml",
-        "editor.formatOnSave": false,
-        "editor.tabSize": 2
-    },
-	"workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
-	"workbench.editor.enablePreview": false,
-	"editor.renderWhitespace": "trailing",
-	"files.trimTrailingWhitespace": true,
-	"editor.inlineSuggest.enabled": true,
-	"editor.accessibilitySupport": "off",
-	"vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\uriah\\scoop\\shims\\nvim.exe",
-	"vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\uriah\\AppData\\Local\\nvim\\init.vim",
+	"search.mode": "newEditor",
 	"security.workspace.trust.untrustedFiles": "open",
-	"dart.openDevTools": "flutter",
-	"bracket-pair-colorizer-2.depreciation-notice": false,
+	"terminal.integrated.cursorWidth": 2,
+	"terminal.integrated.fontFamily": "Hack NF",
 	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "svelte.enable-ts-plugin": true,
-    "[svelte]": {
-        "editor.defaultFormatter": "svelte.svelte-vscode"
-    },
-    "typescript.suggest.paths": true,
-    "eslint.packageManager": "yarn",
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+	"vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+	"vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+	"vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
+	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+	"workbench.editor.pinnedTabSizing": "compact",
+	"workbench.editor.wrapTabs": true,
+	"workbench.editor.tabSizing": "shrink",
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ TSA/ASD 🧩",
+	"redhat.telemetry.enabled": false,
+	"gitlens.advanced.repositorySearchDepth": 10,
+	"git.repositoryScanMaxDepth": -1,
+	"github.gitProtocol": "ssh",
+	"git.confirmSync": false,
+	"remote.SSH.remotePlatform": {
+		"192.168.1.4": "macOS",
+		"MacbookAir": "macOS",
+		"192.168.1.8": "macOS"
 	},
-	"window.restoreWindows": "none",
-	"errorLens.enabledDiagnosticLevels": [
-		"error",
-		"info"
-	],
-	"cmake.configureOnOpen": true,
-	"vscode-neovim.neovimInitVimPaths.darwin": "/usr/bin/nvim",
+	"dart.openDevTools": "flutter",
+	"window.menuBarVisibility": "compact",
+	"vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\uriah\\AppData\\Local\\nvim\\init.vim",
 }

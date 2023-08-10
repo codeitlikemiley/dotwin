@@ -110,18 +110,19 @@ theme: Tokyonight_Storm
 
 key_bindings:
   - { key: E,     mods: Alt,       chars: "\x01\x45" } # View Window Tree
-  - { key: V,     mods: Alt|Shift,       chars: "\x01\x5f" } # Layout Even Horizontal
+  - { key: E,     mods: Alt|Shift, chars: "\x01\x71" } # Select Pane
+  - { key: F,     mods: Alt,       action: ToggleFullscreen }
+  - { key: V,     mods: Alt|Shift, chars: "\x01\x5f" } # Layout Even Horizontal
   - { key: H,     mods: Alt,       chars: "\x01\x68" } # Move Pane Left
   - { key: J,     mods: Alt,       chars: "\x01\x6a" } # Move Pane Down
   - { key: K,     mods: Alt,       chars: "\x01\x6b" } # Move Pane Up
   - { key: L,     mods: Alt,       chars: "\x01\x6c" } # Move Pane Right
   - { key: N,     mods: Alt,       chars: "\x01\x63" } # Create New Window
-  - { key: Q,     mods: Alt,       chars: "\x01\x51" } # Kill Workspace | Same as Close Tab
+  - { key: Q,     mods: Alt,       chars: "\x01\x58" } # Kill Workspace | Same as Close Tab
   - { key: R,     mods: Alt,       chars: "\x01\x72" } # Rename Pane
   - { key: T,     mods: Alt,       chars: "\x01\x63" } # Create New Window
   - { key: W,     mods: Alt,       chars: "\x01\x78" } # Kill Window
   - { key: Z,     mods: Alt,       chars: "\x01\x7a" } # Zoom Pane
-  - { key: F,       mods: Alt,       action: ToggleFullscreen }
 
     # Manage Tabbing
   - { key: Key1,  mods: Alt,       chars: "\x01\x31" }
@@ -139,8 +140,9 @@ key_bindings:
   - { key: Return,  mods: Alt, mode: ~Search,  chars: "\x01\x5b" } # Tmux Vi Mode
   - { key: Return,  mods: Alt|Shift, mode: ~Search,    action: ToggleViMode } # Alacritty Vi Mode
 
-  - { key: S,     mods: Alt,  chars: "\x01\x73" } # Split Horizontal Pane
-  - { key: V,      mods: Alt,  chars: "\x01\x61" } # Split Vertical Pane
+  - { key: D,     mods: Alt|Shift,  chars: "\x01\x73" } # Split Horizontal Pane
+  - { key: D,      mods: Alt,  chars: "\x01\x61" } # Split Vertical Pane
+  - { key: V,      mods: Alt,  action: Paste } # Split Vertical Pane
   - { key: X,      mods: Alt|Shift,  chars: "\x01\x7b" } # Move Current Pane Left
   - { key: X,     mods: Alt,  chars: "\x01\x7d" } # Move Current Pane Right
   - { key: S,     mods: Alt|Shift, chars: "\x01\x2b" } # Even Layout Horizontal
@@ -148,6 +150,7 @@ key_bindings:
   - { key: J,     mods: Alt|Shift, chars: "\x01\x4a" } # Decrease Pane Vertical
   - { key: K,     mods: Alt|Shift, chars: "\x01\x4b" } # Increase Pane Vertical
   - { key: L,     mods: Alt|Shift, chars: "\x01\x4c" } # Increase Pane Horizontal
+  - { key: Q,     mods: Alt|Shift, chars: "\x01\x51" } # Quit Terminal
   - { key: R,     mods: Alt|Shift, chars: "\x01\x74" } # Reload Tmux Config
   - { key: W,     mods: Alt|Shift, chars: "\x01\x5a" } # Tmux Kill Server
 

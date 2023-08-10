@@ -3,9 +3,9 @@
 # Install-Module PSReadLine -Force
 # Install-Module npm-completion -Scope CurrentUser
 # Install-Module -Name PSFzf -RequiredVersion 2.2.9
-# cargo install fnm
-# cargo install starship
-
+# winget install Schniz.fnm
+# winget install Starship.Starship
+# If you install using winget you need to Add .exe file to path
 Import-Module npm-completion
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 Set-PsFzfOption -TabExpansion
@@ -33,8 +33,8 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
 # -------------------------------------------------------------------------------------------------
 # Remove Aliases
 # Windows Built in Aliases , We need to Use Unix Counter part
-Remove-Item alias:gl -Force
-Remove-Item alias:rp -Force
+#Remove-Item alias:gl -Force
+#Remove-Item alias:rp -Force
 
 # -------------------------------------------------------------------------------------------------
 # Fuzzy Finder Commands
@@ -201,9 +201,10 @@ function Invoke-Reload-Profile {
 # -------------------------------------------------------------------------------------------------
 # Add All Alias to Commands Shortcuts
 set-alias ln New-Link
-set-alias rp Invoke-Reload-Profile
+set-alias reload Invoke-Reload-Profile
 # set-alias -Name j -Value jrnl.exe -Option AllScope
 set-alias -Name tag -Value Add-Tag -Option AllScope
+set-alias remote Open-VSCode-Remotely -Option AllScope
 set-alias -Name ptag -Value Push-Tag -Option AllScope
 #Set-Alias -Name fresh -Value Invoke-Fresh-Command -Option AllScope
 Set-Alias -Name wip -Value Add-Wip -Option AllScope
@@ -239,7 +240,7 @@ Set-Alias -Name w32 -Value Set-Path-Win32 -Option AllScope
 function Open-VSCodium-Keys { code $env:appdata\VSCodium\User\keybindings.json }
 function Open-VSCodium-Settings { code $env:appdata\VSCodium\User\settings.json }
 # Config for Openning Settings and Config in VSCODE
-function Open-VSCode-Workspace($name){code"$env:USERPROFILE\.workspace\${name}.code-workspace"}
+function Open-VSCode-Workspace($name){sudo code"$env:USERPROFILE\.workspace\${name}.code-workspace"}
 function Open-VSCode-Keys { code $env:appdata\Code\User\keybindings.json }
 function Open-VSCode-Settings { code $env:appdata\Code\User\settings.json }
 # Other Config
@@ -247,6 +248,8 @@ function Open-Vim-Config { code $env:LOCALAPPDATA\nvim\init.vim }
 function Open-Alacritty-Config { code $env:appdata\alacritty\alacritty.yml }
 function Open-Etc-Host { code $env:windir\System32\Drivers\etc\hosts }
 function Open-Profile { code $profile}
+
+function Open-VSCode-Remotely ($folder){ explorer.exe "vscode://vscode-remote/wsl+ubuntu/home/uriah/Code/${folder}"}
 #function Export-Firestore { gcloud beta firestore export --collection-ids=$args}
 
 
@@ -268,10 +271,9 @@ Set-Alias -Name ws -Value Open-VSCode-Workspace -Option AllScope
 #Set-Alias -Name fgs -Value Invoke-FuzzyGitStatus -Option AllScope
 #Set-Alias -Name fh -Value Invoke-FuzzyHistory -Option AllScope
 #Set-Alias -Name fd -Value Invoke-FuzzySetLocation -Option AllScope
-
 # -------------------------------------------------------------------------------------------------
 # Beautify our terminal
-Invoke-Expression (&starship init powershell)
+Invoke-Expression (& 'C:\Program Files\starship\bin\starship.exe' init powershell --print-full-init | Out-String)
 # FNM Node Js
 fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
 Invoke-Expression (& {
@@ -283,3 +285,13 @@ Invoke-Expression (& {
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 # Set-PSReadLineKeyHandler -Chord Ctrl+e -ViMode Insert -ScriptBlock {
 # }
+
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}

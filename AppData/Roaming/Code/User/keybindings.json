@@ -99,11 +99,6 @@
         "when": "breadcrumbsPossible"
     },
     {
-        "key": "alt+.",
-        "command": "editor.action.autoFix",
-        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
-    },
-    {
         "key": "ctrl+up",
         "command": "-selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
@@ -220,10 +215,6 @@
         "when": "panelFocus"
     },
     {
-        "key": "alt+`",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    {
         "command": "vscode-neovim.compositeEscape1",
         "key": "j",
         "when": "neovim.mode == insert && editorTextFocus",
@@ -239,11 +230,11 @@
         "command": "fileutils.removeFile",
         "when": "editorTextFocus && neovim.mode == 'normal'",
     },
-    {
-        "key": "alt+r",
-        "command": "fileutils.renameFile",
-        "when": "neovim.mode == normal && editorTextFocus",
-    },
+    // {
+    //     "key": "alt+r",
+    //     "command": "fileutils.renameFile",
+    //     "when": "neovim.mode == normal && editorTextFocus",
+    // },
     {
         "key": "alt+d",
         "command": "fileutils.duplicateFile",
@@ -264,11 +255,11 @@
         "command": "fileutils.moveFile",
         "when": "neovim.mode == normal && editorTextFocus",
     },
-    {
-        "key": "shift+alt+r",
-        "command": "fileutils.copyFileName",
-        "when": "editorTextFocus && neovim.mode == 'normal'",
-    },
+    // {
+    //     "key": "shift+alt+r",
+    //     "command": "fileutils.copyFileName",
+    //     "when": "editorTextFocus && neovim.mode == 'normal'",
+    // },
     {
         "key": "alt+p",
         "command": "copyRelativeFilePath",
@@ -617,19 +608,9 @@
         "when": "listFocus && listSupportsMultiselect && !inputFocus"
     },
     {
-        "key": "alt+.",
-        "command": "problems.action.showQuickFixes",
-        "when": "problemFocus"
-    },
-    {
         "key": "ctrl+.",
         "command": "-problems.action.showQuickFixes",
         "when": "problemFocus"
-    },
-    {
-        "key": "alt+.",
-        "command": "editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
         "key": "ctrl+.",
@@ -660,11 +641,6 @@
     {
         "key": "ctrl+y",
         "command": "-redo"
-    },
-    {
-        "key": "shift+alt+l",
-        "command": "bracket-pair-colorizer-2.undoBracketSelection",
-        "when": "editorTextFocus"
     },
     {
         "key": "shift+alt+h",
@@ -770,7 +746,7 @@
         "when": "editorTextFocus && !textCompareEditorActive"
     },
     {
-        "key": "alt+f5",
+        "key": "alt+f3",
         "command": "workbench.view.debug",
         "when": "viewContainer.workbench.view.debug.enabled"
     },
@@ -782,14 +758,6 @@
     {
         "key": "alt+f4",
         "command": "-workbench.action.closeWindow"
-    },
-    {
-        "key": "alt+f4",
-        "command": "bookmarks.list"
-    },
-    {
-        "key": "alt+f4",
-        "command": "workbench.view.extension.bookmarks"
     },
     {
         "key": "alt+f7",
@@ -817,10 +785,6 @@
     },
     {
         "key": "alt+f2",
-        "command": "workbench.view.extension.todo-tree-container"
-    },
-    {
-        "key": "alt+f3",
         "command": "workbench.view.scm"
     },
     {
@@ -1120,7 +1084,7 @@
         "command": "dart-import.fix"
     },
     {
-        "key": "alt+f6",
+        "key": "alt+f4",
         "command": "workbench.view.extension.test"
     },
     {
@@ -1189,25 +1153,20 @@
         "command": "-editor.unfold",
         "when": "editorTextFocus && foldingEnabled"
     },
-    {
-        "key": "shift+alt+y",
-        "command": "extension.flutterStylizer"
-    },
-    {
-        "key": "alt+e",
-        "command": "testing.debugAtCursor",
-        "when": "editorTextFocus"
-    },
+    // {
+    //     "key": "shift+alt+y",
+    //     "command": "extension.flutterStylizer"
+    // },
     {
         "key": "ctrl+; ctrl+c",
         "command": "-testing.debugAtCursor",
         "when": "editorTextFocus"
     },
-    {
-        "key": "shift+alt+e",
-        "command": "testing.debugCurrentFile",
-        "when": "editorTextFocus"
-    },
+    // {
+    //     "key": "shift+alt+e",
+    //     "command": "testing.debugCurrentFile",
+    //     "when": "editorTextFocus"
+    // },
     {
         "key": "ctrl+; ctrl+f",
         "command": "-testing.debugCurrentFile",
@@ -1274,7 +1233,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "alt+o",
+        "key": "alt+t",
         "command": "workbench.action.showAllSymbols"
     },
     {
@@ -1332,25 +1291,25 @@
         "command": "-editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "alt+t",
-        "command": "flutter.hotRestart"
-    },
-    {
-        "key": "shift+alt+t",
-        "command": "flutter.hotReload",
-        "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
-    },
-    {
-        "key": "ctrl+f5",
-        "command": "-flutter.hotReload",
-        "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
-    },
-    {
-        "key": "alt+'",
-        "command": "testing.runAtCursor",
-        "when": "editorTextFocus"
-    },
+    // {
+    //     "key": "alt+t",
+    //     "command": "flutter.hotRestart"
+    // },
+    // {
+    //     "key": "shift+alt+t",
+    //     "command": "flutter.hotReload",
+    //     "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
+    // },
+    // {
+    //     "key": "ctrl+f5",
+    //     "command": "-flutter.hotReload",
+    //     "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
+    // },
+    // {
+    //     "key": "alt+e",
+    //     "command": "testing.runAtCursor",
+    //     "when": "editorTextFocus"
+    // },
     {
         "key": "shift+alt+'",
         "command": "testing.runCurrentFile",
@@ -1359,5 +1318,217 @@
     {
         "key": "shift+alt+/",
         "command": "testing.runAll"
+    },
+    {
+        "key": "ctrl+; c",
+        "command": "-testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "alt+r",
+        "command": "debug.openView",
+        "when": "!debuggersAvailable"
+    },
+    {
+        "key": "f5",
+        "command": "-debug.openView",
+        "when": "!debuggersAvailable"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "ctrl+shift+f5",
+        "command": "-workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "alt+e",
+        "command": "test-explorer.run-test-at-cursor"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "test-explorer.debug-test-at-cursor"
+    },
+    {
+        "key": "alt+f5",
+        "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "alt+f6",
+        "command": "workbench.view.extension.todo-tree-container"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "alt+.",
+        "command": "-auto-close-tag.closeTag"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+k shift+enter",
+        "command": "-workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+k shift+enter",
+        "command": "-workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "shift+win+[",
+        "command": "gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "shift+win+[",
+        "command": "gitlens.diffWithPreviousInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPreviousInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "shift+win+[",
+        "command": "gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "shift+win+]",
+        "command": "gitlens.diffWithNext",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNext",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "shift+win+]",
+        "command": "gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "shift+win+]",
+        "command": "gitlens.diffWithNextInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNextInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "shift+alt+backspace",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "alt+`",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "-gitlens.toggleCodeLens",
+        "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "shift+alt+m",
+        "command": "workbench.actions.view.problems",
+        "when": "workbench.panel.markers.view.active"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-workbench.actions.view.problems",
+        "when": "workbench.panel.markers.view.active"
     }
 ]
